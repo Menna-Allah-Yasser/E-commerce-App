@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MenuItems.Boot"
+    android:background="#e1b284"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="370dp"
+        android:id="@+id/firstCardView"
+        android:layout_height="320dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#faf2ea">
+
+            <ImageView
+                android:id="@+id/imageViewInfo"
+                android:layout_width="480dp"
+                android:layout_height="260dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/boot" />
+
+            <TextView
+                android:id="@+id/shoeNameInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewInfo"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Shoe Name"
+                android:textColor="#604A4A"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewInfo"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:text="Price : 100$ "
+                android:textColor="#604A4A"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:id="@+id/secondCardView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/firstCardView">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="310dp"
+            android:layout_marginTop="5dp"
+            android:background="#f5e5d6">
+
+            <TextView
+                android:id="@+id/quantity2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentLeft="true"
+                android:text="No.of items :"
+                android:textColor="#604A4A"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/addquantity"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/plus3"
+                android:layout_below="@+id/quantity2"
+                android:contentDescription="plus"
+
+                />
+
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_toRightOf="@+id/addquantity"
+                android:text="0"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/quantity2"/>
+
+            <ImageButton
+                android:id="@+id/subquantity"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/quantity"
+                android:background="@drawable/minus2"
+                android:layout_below="@+id/quantity2"
+                android:contentDescription="minus" />
+
+
+            <Button
+                android:id="@+id/buyit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thirdRadioButton"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="170dp"
+                android:layout_marginBottom="30dp"
+                android:background="#e1b284"
+                android:text="Buy it "
+                android:textColor="#604A4A"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/descriptioninfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subquantity"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/heel_sandals"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
+
+

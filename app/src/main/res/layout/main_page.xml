@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#FDFDFD"
+    android:isScrollContainer="false"
+    android:scrollbars="vertical">
+
+    <!--search section-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EAD5C7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/search_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="8dp"
+
+                android:layout_marginRight="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/search_text"
+                    android:layout_width="320dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#FAF9F9"
+                    android:drawableRight="@android:drawable/ic_menu_search"
+                    android:gravity="center|start"
+                    android:hint="Search"
+                    android:paddingLeft="7dp"
+
+                    android:textColorHint="#2C2A2A" />
+
+            </LinearLayout>
+            <!--banner and category section-->
+            <LinearLayout
+                android:id="@+id/image_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.19">
+
+                <ImageView
+                    android:id="@+id/banner_img"
+                    android:layout_width="320dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:baseline="2dp"
+                    android:scaleType="centerCrop"
+                    android:scaleX="1"
+                    app:srcCompat="@drawable/dresses" />
+
+                <LinearLayout
+                    android:id="@+id/category_icons"
+                    android:layout_width="338dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/catg_shose"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF">
+
+                        <ImageView
+                            android:id="@+id/shose_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/shose" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/catg_shirt"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF">
+
+                        <ImageView
+                            android:id="@+id/shirt_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            app:srcCompat="@drawable/shirt" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/catg_dress"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF">
+
+                        <ImageView
+                            android:id="@+id/dress_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            app:srcCompat="@drawable/dress" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/catg_traouser"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/traouser_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            app:srcCompat="@drawable/trou" />
+                    </FrameLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--shoses section-->
+            <LinearLayout
+                android:id="@+id/shoses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                android:scrollbarAlwaysDrawVerticalTrack="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shirts"
+                app:layout_constraintVertical_bias="0.120000005">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/shoses_text"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:text="Shoses"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/seeMore_sh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginRight="9dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="See More.."
+                        android:textColor="#2196F3" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/scroll_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/scroll_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/shose4"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/shose_item4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#F5F6F0"
+                                app:srcCompat="@drawable/shose4" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/shose5"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/shose_item5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#F7F7F7"
+                                app:srcCompat="@drawable/shose" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/shose2"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/shose_item2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#F0F0F0"
+                                app:srcCompat="@drawable/shose2" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/shose1"
+                            android:layout_width="140dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/shose_item1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#D4D4D4"
+                                app:srcCompat="@drawable/shose1" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/shose3"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/shose_item3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EBECEE"
+                                app:srcCompat="@drawable/shose6" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+            <!--shirts section-->
+            <LinearLayout
+                android:id="@+id/shirts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                android:scrollbarAlwaysDrawVerticalTrack="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_category"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/shirts_text"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:text="Shirts"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/seeMore_shirt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginRight="9dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="Shop now.."
+                        android:textColor="#2196F3" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/scroll_lay_sh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/scroll_layout_shirt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/shirt4"
+                            android:layout_width="140dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/shirt_item4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#D4D4D4"
+                                app:srcCompat="@drawable/shirt4" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/shirt5"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/shirt_item5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EBECEE"
+                                app:srcCompat="@drawable/shirt5" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/shirt1"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/shirt_item1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                app:srcCompat="@drawable/shirt1" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/shirt2"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#F9F9F9"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/shirt_item2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:background="#EFEFEF"
+                                app:srcCompat="@drawable/shirt2" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/shirt3"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/shirt_item3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                app:srcCompat="@drawable/shirt" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+            <!--trousers section-->
+            <LinearLayout
+                android:id="@+id/trou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                android:scrollbarAlwaysDrawVerticalTrack="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_category"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/trou_text"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:text="Trousers"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/seeMore_trou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginRight="9dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="Browse.."
+                        android:textColor="#2196F3" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/scroll_lay_tr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/scroll_layout_trou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/trou2"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/trou_item2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EBECEE"
+                                app:srcCompat="@drawable/trou2" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/trou4"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#F9F9F9"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/trou_item4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:background="#EFEFEF"
+                                app:srcCompat="@drawable/trou4" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/trou5"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/trou_item5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                app:srcCompat="@drawable/trou" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/trou3"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/trou_item3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:background="#EDEDED"
+                                app:srcCompat="@drawable/trou3" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/trou1"
+                            android:layout_width="140dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/trou_item1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#EEEEEE"
+                                app:srcCompat="@drawable/trou1" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+            <!--dresses section-->
+            <LinearLayout
+                android:id="@+id/dress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                android:scrollbarAlwaysDrawVerticalTrack="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_category"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dress_text"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:text="Dresses"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/seeMore_dress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginRight="9dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="more.."
+                        android:textColor="#2196F3" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/scroll_lay_ds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/scroll_layout_dress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/dress2"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/dress_item2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:scaleType="centerInside"
+                                app:srcCompat="@drawable/dress2" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/dress3"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/dress_item3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:scaleType="centerInside"
+                                app:srcCompat="@drawable/dress3" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/dress4"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/dress_item4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:scaleType="centerInside"
+                                app:srcCompat="@drawable/dress4" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/dress5"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/dress_item5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:scaleType="centerInside"
+                                app:srcCompat="@drawable/dress5" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/dress6"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/dress_item6"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:scaleType="centerInside"
+                                app:srcCompat="@drawable/dress6" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/dress1"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="#FFFFFF"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/dress_item1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:scaleType="centerInside"
+                                app:srcCompat="@drawable/dress1" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
